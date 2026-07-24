@@ -1,10 +1,16 @@
 {
   "version": 2,
-  "framework": "vite",
-  "buildCommand": "npx pnpm --filter @workspace/portfolio run build",
-  "outputDirectory": "artifacts/portfolio/dist/public",
-  "installCommand": "npx pnpm install",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "artifacts/portfolio/dist/public"
+      }
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
