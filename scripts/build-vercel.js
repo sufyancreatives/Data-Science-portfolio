@@ -5,7 +5,7 @@ import path from 'path';
 console.log('🚀 Running Vercel Monorepo Build...');
 
 // 1. Execute Vite build in portfolio package
-execSync('npx vite build --config artifacts/portfolio/vite.config.ts', { stdio: 'inherit' });
+execSync('pnpm --filter @workspace/portfolio run build', { stdio: 'inherit' });
 
 // 2. Locate built output
 const possibleOutputs = [
