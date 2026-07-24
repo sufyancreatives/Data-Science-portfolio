@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd ../.. && npx pnpm --filter @workspace/portfolio run build",
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
