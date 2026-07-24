@@ -1,0 +1,130 @@
+MUHAMMAD SUFYAN — PORTFOLIO DESIGN SYSTEM
+==========================================
+Theme: Dark, natural background + neon blue neural-network accent
+
+
+1. BACKGROUND COLORS
+---------------------
+Page background (base):        #0B0E14
+Radial glow center (hero):     #10141C
+  → used as: radial-gradient(ellipse at 50% 30%, #10141C 0%, #0B0E14 70%)
+Surface / card background:     #151A24
+Card border (subtle):          rgba(56, 189, 248, 0.15)
+
+
+2. FONT / TEXT COLORS
+----------------------
+Primary text (headings):       #E7EAF0   (soft warm white — never pure #FFFFFF)
+Secondary text (subtext):      #8891A5
+Body / list text:               #AEB4C2
+Muted / footnote text:         #4A5266
+Eyebrow / label text (accent): #38BDF8
+
+
+3. NEON BLUE "SHINE" SYSTEM (the signature accent)
+----------------------------------------------------
+Core blue (accent, links, borders):    #38BDF8
+Bright glow / pulse highlight:         #7DD3FC
+Glow shadow (buttons, name highlight): rgba(56, 189, 248, 0.35) → 0.6 on hover
+Node glow (canvas shadowBlur):         12–16px blur, color #7DD3FC or #38BDF8
+Name highlight text-shadow:            0 0 24px rgba(56, 189, 248, 0.45)
+
+Usage rule: keep neon blue on ACCENTS ONLY — buttons, links, icons, bullet
+ticks, node/line animation, badges. Never use it as a body text color; body
+text stays #AEB4C2 / #8891A5 so the blue keeps its "shine" instead of
+becoming wallpaper.
+
+
+4. NEURAL NETWORK BACKGROUND ANIMATION (Hero section signature)
+-------------------------------------------------------------------
+Canvas fill (clear each frame):    #0B0E14
+Node count:                        ~55
+Node radius:                       1–2.5px
+Node fill:                         rgba(56, 189, 248, 0.75)
+Node glow:                         shadowBlur 6px, shadowColor #38BDF8
+Node movement:                     drift, velocity ±0.25px/frame, bounce off edges
+
+Connection lines:
+  - Draw only when two nodes are within 150px of each other
+  - Line color: rgba(56, 189, 248, opacity)
+  - Opacity scales with distance: (1 - dist/150) * 0.35
+  - Line width: 0.6px
+
+Pulse effect ("signal firing"):
+  - ~2% chance per frame to spawn a pulse on a random active connection
+  - Pulse travels from node A to node B over ~50 frames (t += 0.02)
+  - Pulse dot radius: 2.5px, fill rgba(125, 211, 252, 0.9)
+  - Pulse glow: shadowBlur 12px, shadowColor #7DD3FC
+
+
+5. SIDEBAR / TIMELINE FIX (Experience section)
+-------------------------------------------------
+Problem: timeline line + circular markers were flush against the container's
+outer edge, clipping against the black border instead of sitting inside it.
+
+Fix:
+  - Wrap timeline in a container with padding-left: 36px
+  - Vertical line position: left: 11px (relative to timeline wrapper, not page edge)
+  - Line color: linear-gradient(to bottom, rgba(56,189,248,0.5), rgba(56,189,248,0.08))
+  - Line width: 1.5px
+  - Circular markers: 24px diameter, background #10141C, border 1.5px solid #38BDF8
+  - Marker center dot: 6px, fill #38BDF8, glow shadow 0 0 8px rgba(56,189,248,0.8)
+  - Marker position: left: -36px (pulls it back onto the line, inside the padding)
+
+Rule of thumb: any timeline / vertical-rule element should always sit inside
+a padded wrapper — never positioned at 0 / flush with the outer container edge.
+
+
+6. BUTTONS
+-----------
+Primary button:
+  Background:   #38BDF8
+  Text color:   #0B0E14  (dark text on bright fill for contrast)
+  Border:       1px solid #38BDF8
+  Glow shadow:  0 0 20px rgba(56, 189, 248, 0.35)
+  Hover glow:   0 0 30px rgba(56, 189, 248, 0.6)  + translateY(-2px)
+
+Secondary button:
+  Background:   transparent
+  Text color:   #E7EAF0
+  Border:       1px solid #2A3142
+  Hover:        border-color #38BDF8, text color #38BDF8
+
+
+7. BADGES / PILLS (e.g. date tags "2024 – Present")
+-------------------------------------------------------
+Text color:     #7DD3FC
+Background:     rgba(56, 189, 248, 0.1)
+Border:         0.5px solid rgba(56, 189, 248, 0.3)
+Border radius:  20px (pill shape)
+
+
+8. BULLET / LIST MARKERS
+--------------------------
+Character:      ›
+Color:          #38BDF8
+Weight:         700 (bold)
+(Do NOT use green — this was the original issue in the Experience section
+screenshot and has been corrected here.)
+
+
+9. TYPOGRAPHY
+---------------
+Headings:   'Space Grotesk', weight 600–700
+Body:       'Inter', weight 400–500
+Both loaded via Google Fonts:
+  https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap
+
+
+10. QUICK REFERENCE — FULL HEX LIST
+--------------------------------------
+#0B0E14   Page background
+#10141C   Radial glow center / surface base
+#151A24   Card surface
+#E7EAF0   Primary text
+#8891A5   Secondary text
+#AEB4C2   Body/list text
+#4A5266   Muted/footnote text
+#38BDF8   Core neon blue (accent, borders, buttons, bullets)
+#7DD3FC   Bright glow / pulse highlight
+#2A3142   Secondary button border (neutral, non-glowing)

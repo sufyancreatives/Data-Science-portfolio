@@ -1,0 +1,94 @@
+Portfolio Website Implementation Plan
+This plan transforms the existing weather dashboard project into a production-ready personal portfolio website for a Data Analyst & Machine Learning Engineer, leveraging the current React + TypeScript + Tailwind setup.
+
+Project Overview
+Replace the existing weather dashboard with a modern, responsive portfolio website featuring dark/light mode toggle, animated sections, and a functional contact form backend.
+
+Phase 1: Project Setup & Dependencies
+Frontend Dependencies
+Install required packages:
+
+react-router-dom for navigation
+framer-motion for animations
+lucide-react for icons
+react-hot-toast for notifications
+Backend Dependencies
+Install required packages:
+
+nodemailer for email sending
+cors for CORS handling
+dotenv for environment variables
+Phase 2: Frontend Structure
+Component Creation
+Create the following components in /frontend/src/components:
+
+Navbar.jsx - Sticky nav with theme toggle and mobile menu
+Hero.jsx - Animated intro with typewriter effect
+About.jsx - Bio section with stats
+Skills.jsx - Categorized skill grid
+Experience.jsx - Vertical timeline
+Projects.jsx - Project grid with filters
+ProjectCard.jsx - Individual project card
+Certifications.jsx - Certifications & education
+Contact.jsx - Contact form with validation
+Footer.jsx - Footer with social links
+ThemeToggle.jsx - Dark/light mode switch
+Styling System
+Create /frontend/src/styles/variables.css with CSS custom properties for theming
+Update /frontend/src/index.css with global styles and theme transitions
+Implement glassmorphism effects and gradient accents
+Add responsive breakpoints for mobile/tablet/desktop
+Main App Structure
+Update App.jsx with React Router setup
+Implement scroll-based reveal animations
+Add active nav-link highlighting
+Configure theme persistence in localStorage
+Phase 3: Backend Implementation
+Contact API
+Create /backend/src/routes/contact.js with POST endpoint
+Create /backend/src/controllers/contactController.js with email logic
+Implement Nodemailer integration with SMTP
+Add client-side validation and error handling
+Create .env.example with required environment variables
+Phase 4: Content & Features
+Hero Section
+Animated intro text with name
+Typewriter effect for roles (Data Analyst, ML Engineer, Python Developer)
+CTA buttons (View Projects, Download Resume)
+Social icons (GitHub, LinkedIn, Email)
+Particle/grid background animation
+Skills Section
+Categorized grid: Programming, ML & AI, Data Visualization, Databases, Tools
+Skill chips with icons and hover effects
+Proficiency level indicators
+Experience Timeline
+Fly Rank AI - Machine Learning Engineer (Present)
+Code Alpha - Python Programming Intern
+Animated timeline connector with scroll effects
+Projects Section
+6 placeholder project cards (ML/data-themed)
+Filter buttons: All / Machine Learning / Data Analysis / Dashboards
+Each card: thumbnail, title, description, tech stack tags, GitHub + Demo buttons
+Contact Form
+Fields: Name, Email, Subject, Message
+Client-side validation
+Loading state on submit
+Success/error toast notifications
+Backend email sending with auto-reply
+Phase 5: Polish & Deployment
+Performance & SEO
+Add meta tags and Open Graph tags
+Implement lazy loading for images
+Add semantic HTML and ARIA labels
+Optimize bundle size
+Documentation
+Create comprehensive README.md with:
+Project overview
+Setup instructions (frontend & backend)
+Environment variables guide
+Deployment steps (Vercel for frontend, Render for backend)
+Testing
+Test responsive design on all breakpoints
+Verify theme toggle persistence
+Test contact form end-to-end
+Validate all animations and transitions

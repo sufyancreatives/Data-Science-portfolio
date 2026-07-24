@@ -1,0 +1,261 @@
+ROLE:
+Act as a senior full-stack developer and UI/UX designer with expertise in 
+React.js, Node.js, and modern portfolio design for tech professionals.
+
+OBJECTIVE:
+Build a fully responsive, production-ready personal portfolio website for a 
+Data Science Enthusiast & Machine Learning Engineer. The site should look 
+premium, data/AI-themed, and clearly communicate technical credibility to 
+recruiters and clients.
+
+────────────────────────────────────
+ABOUT ME (use this to populate all content)
+────────────────────────────────────
+- Name: Muhammad Sufyan
+- Title: Data Science Enthusiast | ML Engineer
+- Location: Hyderabad, Sindh, Pakistan
+- Email: sufyancreatvies@gmail.com
+- Phone: +92 312 3738027
+- GitHub: https://github.com/sufyancreatives
+- LinkedIn: https://www.linkedin.com/in/muhammad-sufyan-04b48b38a/
+- Resume: [add your resume PDF link once ready]
+
+Hero Tagline (short):
+"Data Science Enthusiast & ML Engineer turning data into actionable insights 
+— currently building intelligent systems at FlyRank AI."
+
+About Me (main bio — use this in the About section):
+"I'm Muhammad Sufyan, a Python Developer and Machine Learning enthusiast 
+passionate about turning raw data into meaningful insights. I began my 
+journey with a Python Programming internship at CodeAlpha, and I'm currently 
+working as a Machine Learning Engineering Intern at FlyRank AI, where I apply 
+data analysis and ML techniques to real-world problems. My focus lies in 
+building practical, impactful projects across data science, machine learning, 
+and predictive modeling — driven by curiosity and a commitment to continuous 
+learning."
+
+Extended About (optional, longer version for an About page):
+"I'm Muhammad Sufyan, a 20-year-old Python Developer and AI & Data Science 
+enthusiast based in Hyderabad, Sindh, Pakistan. My journey into tech began 
+with a strong foundation in Python programming, which led me to an internship 
+at CodeAlpha — my first hands-on experience solving real problems with code. 
+That experience sparked a deeper interest in Machine Learning and Data 
+Science, which I've been actively pursuing ever since.
+
+Today, I work as a Machine Learning Engineering Intern at FlyRank AI, where 
+I contribute to building and refining ML-driven solutions while continuing 
+to sharpen my skills in data analysis, exploratory data analysis (EDA), and 
+predictive modeling. I enjoy the process of exploring datasets, uncovering 
+patterns, and translating them into models and visualizations that tell a 
+clear story.
+
+I'm a self-driven learner who believes in building by doing — every project 
+I take on is an opportunity to apply theory to practice. I'm always looking 
+to grow, collaborate, and contribute to impactful, technology-driven 
+solutions."
+
+Skills (grouped for the Skills section):
+
+Core Competencies:
+- Python Programming
+- Machine Learning
+- Data Science
+- Data Analysis
+- Exploratory Data Analysis (EDA)
+- Data Cleaning & Preprocessing
+- Data Visualization
+- Predictive Modeling (Foundational)
+- Applied Artificial Intelligence
+
+Python Libraries & Frameworks:
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- Streamlit
+- FastAPI
+- Uvicorn
+
+Tools & Platforms:
+- Git & GitHub
+- Jupyter Notebook
+- Google Colab
+- Visual Studio Code
+
+Professional Skills:
+- Problem Solving & Critical Thinking
+- Team Collaboration & Leadership
+- Effective Communication
+- Time Management
+- Self-Learning & Research
+- Adaptability
+
+Experience (Timeline section):
+- FlyRank AI — Machine Learning Engineering Intern (Present)
+  • [Add 3-5 bullet points: responsibilities, tools used, impact/results]
+- CodeAlpha — Python Programming Intern
+  • [Add 3-5 bullet points: what you built, learned, or contributed]
+
+Projects: [To be added — 3-6 projects with title, description, tech stack, 
+GitHub link, and live demo/screenshot if available]
+
+Certifications & Education: [To be added — certificate names, issuing 
+platforms, dates, and education details]
+
+────────────────────────────────────
+TECH STACK
+────────────────────────────────────
+- Frontend: React.js (functional components + hooks), React Router
+- Styling: HTML5, CSS3 (Flexbox + Grid, CSS variables for theming), 
+  optional Tailwind CSS
+- Animation: Framer Motion (scroll reveals, hover effects, page transitions)
+- Backend: Node.js + Express.js (contact form API)
+- Email service: Nodemailer (SMTP) or EmailJS as a fallback
+- Icons: React Icons or Lucide React
+- Deployment: Frontend on Vercel/Netlify, Backend on Render/Railway
+
+────────────────────────────────────
+DESIGN SYSTEM
+────────────────────────────────────
+Theme: Toggleable Dark Mode / Light Mode (persist choice in localStorage)
+
+Dark Mode Palette:
+- Background: #0A0F1E / #0D1117
+- Surface: #111827
+- Primary Accent: #00D4FF (electric blue) or #7C3AED (violet)
+- Text Primary: #F9FAFB
+- Text Secondary: #9CA3AF
+
+Light Mode Palette:
+- Background: #FFFFFF / #F9FAFB
+- Surface: #F3F4F6
+- Primary Accent: same as dark mode for brand consistency
+- Text Primary: #111827
+- Text Secondary: #4B5563
+
+Typography:
+- Headings: 'Space Grotesk' or 'Poppins', bold, tight letter-spacing
+- Body: 'Inter', regular weight, 1.6 line-height
+- Code/monospace accents: 'JetBrains Mono' for tech-flavored details
+
+Visual Identity:
+- Subtle animated particle/grid background in Hero section (AI/data theme)
+- Rounded cards (12-16px radius), soft shadows, glassmorphism on cards
+- Gradient accents on buttons and section dividers
+- Micro-interactions: hover lifts, underline animations on links, 
+  smooth theme-toggle transition
+
+────────────────────────────────────
+SITE STRUCTURE / FOLDER LAYOUT
+────────────────────────────────────
+/client (React app)
+  /src
+    /components
+      Navbar.jsx
+      Hero.jsx
+      About.jsx
+      Skills.jsx
+      Experience.jsx
+      Projects.jsx
+      ProjectCard.jsx
+      Certifications.jsx
+      Contact.jsx
+      Footer.jsx
+      ThemeToggle.jsx
+    /assets (images, icons, resume PDF)
+    /styles (global.css, variables.css)
+    App.jsx
+    main.jsx
+/server (Node/Express app)
+  index.js
+  routes/contact.js
+  controllers/contactController.js
+  .env.example
+
+────────────────────────────────────
+SECTION-BY-SECTION REQUIREMENTS
+────────────────────────────────────
+
+1. NAVBAR
+   - Sticky, transparent-to-solid on scroll
+   - Logo/initials "MS" on left, nav links (About, Skills, Experience, 
+     Projects, Contact)
+   - Theme toggle switch (sun/moon icon)
+   - Hamburger menu for mobile with slide-in drawer
+
+2. HERO SECTION
+   - Animated intro text: "Hi, I'm Muhammad Sufyan"
+   - Rotating/typewriter effect for roles: "Data Science Enthusiast", 
+     "ML Engineer", "Python Developer"
+   - Tagline: "Turning data into actionable insights — currently building 
+     intelligent systems at FlyRank AI."
+   - CTA buttons: "View Projects" (scroll link) + "Download Resume" (PDF link)
+   - Social icons: GitHub, LinkedIn, Email
+   - Profile image or abstract data-themed illustration on the right
+
+3. ABOUT ME
+   - Use the "About Me (main bio)" text above
+   - Small stats row: "1+ Years Experience", "X Projects Completed", 
+     "9+ Technologies"
+
+4. SKILLS
+   - Categorized grid using the Skills section above: Core Competencies | 
+     Python Libraries & Frameworks | Tools & Platforms | Professional Skills
+   - Each skill as a chip/badge with icon
+   - Hover effect revealing proficiency level
+
+5. EXPERIENCE (Vertical Timeline)
+   - FlyRank AI — Machine Learning Engineering Intern (Present)
+   - CodeAlpha — Python Programming Intern
+   - Timeline connector line with animated dot on scroll
+   - Bullet points to be added once finalized
+
+6. PROJECTS
+   - Grid of 3-6 project cards (placeholder until real projects are added)
+   - Each card: thumbnail/chart image, title, 1-2 line description, 
+     tech stack tags, GitHub + Live Demo buttons
+   - Filter buttons: All / Machine Learning / Data Analysis / Dashboards
+
+7. CERTIFICATIONS & EDUCATION
+   - List/grid of certificates with issuing platform and date (to be added)
+   - Education entry (degree, institution, year)
+
+8. CONTACT
+   - Form fields: Name, Email, Subject, Message
+   - Client-side validation + loading state on submit
+   - POST request to Node/Express backend (/api/contact)
+   - Backend sends email via Nodemailer to sufyancreatvies@gmail.com + 
+     auto-reply to sender
+   - Success/error toast notification
+   - Direct contact links: email, phone (+92 312 3738027), LinkedIn, GitHub
+
+9. FOOTER
+   - "© [current year] Muhammad Sufyan. All rights reserved."
+   - Quick nav links
+   - Social icons (GitHub, LinkedIn, Email)
+   - "Back to top" button
+
+────────────────────────────────────
+FUNCTIONALITY REQUIREMENTS
+────────────────────────────────────
+- Fully responsive: mobile (< 480px), tablet (481-768px), desktop (> 768px)
+- Dark/Light theme toggle with smooth CSS transition, saved in localStorage
+- Scroll-based reveal animations (Framer Motion or Intersection Observer)
+- Active nav-link highlighting based on scroll position
+- Lazy-loaded images for performance
+- Basic SEO: meta tags, title ("Muhammad Sufyan | Data Science Enthusiast & 
+  ML Engineer"), Open Graph tags, favicon
+- Accessibility: semantic HTML, alt text, keyboard navigation, ARIA labels
+- Contact form backend with proper error handling and .env for credentials
+
+────────────────────────────────────
+DELIVERABLES
+────────────────────────────────────
+- Complete, well-commented React frontend (all components above)
+- Node.js/Express backend with working contact form API
+- Global CSS with theme variables for dark/light mode
+- README.md with setup instructions:
+   1. How to run frontend locally (npm install, npm run dev)
+   2. How to run backend locally (npm install, npm start)
+   3. Environment variables needed (.env.example)
+   4. Deployment steps (Vercel for frontend, Render for backend)
