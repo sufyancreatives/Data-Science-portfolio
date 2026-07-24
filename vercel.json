@@ -1,9 +1,9 @@
 {
   "version": 2,
+  "framework": "vite",
   "buildCommand": "npx pnpm --filter @workspace/portfolio run build",
   "outputDirectory": "artifacts/portfolio/dist/public",
   "installCommand": "npx pnpm install",
-  "framework": null,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
