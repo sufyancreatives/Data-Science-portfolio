@@ -5,7 +5,7 @@
   "packageManager": "pnpm@10.28.0",
   "scripts": {
     "preinstall": "node -e \"const fs = require('fs'); ['package-lock.json', 'yarn.lock'].forEach(f => fs.existsSync(f) && fs.rmSync(f, { force: true })); if (!/pnpm/.test(process.env.npm_config_user_agent || '')) { console.error('Use pnpm instead'); process.exit(1); }\"",
-    "build": "pnpm --filter @workspace/portfolio run build",
+    "build": "pnpm --filter @workspace/portfolio run build && node -e \"const fs = require('fs'); fs.cpSync('artifacts/portfolio/dist/public', 'public', { recursive: true });\"",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
   },
